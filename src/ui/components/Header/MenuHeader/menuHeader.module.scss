@@ -1,0 +1,34 @@
+.buttonMenu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--gray-50);
+}
+.dropDownContent {
+  position: absolute;
+  min-width: 120px;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 1;
+  border: none;
+  background-color: var(--secondary-main);
+}
+
+.buttonMenu {
+  font-size: 14px;
+  padding: 10px;
+
+  color: var(--primary-main);
+  background: transparent;
+
+  border: none;
+  border-bottom: 2px solid transparent;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.buttonMenu:hover {
+  border-bottom: 2px solid var(--primary-light);
+}

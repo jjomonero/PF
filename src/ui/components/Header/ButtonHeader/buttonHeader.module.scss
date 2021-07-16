@@ -1,0 +1,20 @@
+.button {
+  font-size: 15px;
+  padding: 10px;
+
+  color: var(--primary-main);
+  background: transparent;
+
+  border: none;
+  border-bottom: 2px solid transparent;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--grey-50);
+
+  border-bottom: 2px solid var(--primary-light);
+}

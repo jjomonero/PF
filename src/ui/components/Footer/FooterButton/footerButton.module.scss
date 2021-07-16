@@ -1,0 +1,18 @@
+.footer {
+  font-size: 15px;
+  padding: 10px;
+  border: none;
+
+  color: var(--primary-main);
+  background: transparent;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.footer:hover {
+  color: var(--grey-50);
+}
