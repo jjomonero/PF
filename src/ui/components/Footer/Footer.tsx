@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PFLogo from "../../../../public/assets/pf-azul.jpeg";
 import FacebookIcon from "../../../../public/assets/facebookIcon.svg";
-import InstagramIcon from "../../../../public/assets/instagramIcon.svg";
+import InstagramIcon from "../../../../public/assets/InstagramIcon.svg";
 import EmailIcon from "../../../../public/assets/emailIcon.svg";
 import LocationIcon from "../../../../public/assets/locationIcon.svg";
 import PhoneIcon from "../../../../public/assets/phoneIcon.svg";
