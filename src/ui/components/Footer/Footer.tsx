@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PFLogo from "../../../../public/assets/pf-azul.jpeg";
 import FacebookIcon from "../../../../public/assets/facebookIcon.svg";
-import InstagramIcon from "../../../../public/assets/InstagramIcon.svg";
+import Insta from "../../../../public/assets/insta.svg";
 import EmailIcon from "../../../../public/assets/emailIcon.svg";
 import LocationIcon from "../../../../public/assets/locationIcon.svg";
 import PhoneIcon from "../../../../public/assets/phoneIcon.svg";
@@ -48,7 +48,7 @@ export function Footer() {
           />
           <div className={styles.icons}>
             <FooterIcons href={"#"} src={FacebookIcon} alt={"Facebook"} />
-            <FooterIcons href={"#"} src={InstagramIcon} alt={"Instagram"} />
+            <FooterIcons href={"#"} src={Insta} alt={"Instagram"} />
             <FooterIcons href={"#"} src={EmailIcon} alt={"Email"} />
           </div>
         </div>
