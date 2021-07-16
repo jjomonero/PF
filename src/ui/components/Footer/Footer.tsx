@@ -2,10 +2,10 @@ import { FooterButton } from "./FooterButton/FooterButton";
 import Image from "next/image";
 import Link from "next/link";
 import PFLogo from "../../../../public/assets/pf-azul.jpeg";
-import FacebookIcon from "../../../../public/assets/facebookIcon.svg";
-import EmailIcon from "../../../../public/assets/emailIcon.svg";
-import LocationIcon from "../../../../public/assets/locationIcon.svg";
-import PhoneIcon from "../../../../public/assets/phoneIcon.svg";
+import FacebookIcon from "../../../../public/assets/facebookIcon.png";
+import EmailIcon from "../../../../public/assets/emailIcon.png";
+import LocationIcon from "../../../../public/assets/locationIcon.png";
+import PhoneIcon from "../../../../public/assets/phoneIcon.png";
 
 import styles from "./footer.module.scss";
 import React from "react";
