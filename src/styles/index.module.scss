@@ -1,0 +1,104 @@
+.container {
+  height: 100vh;
+  background-image: url(../../public/assets/teto.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .strong {
+    color: var(--primary-main);
+    // background: var(--secondary-main);
+  }
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: #fff;
+    font-style: italic;
+    font-size: 70px;
+    filter: opacity(0.9);
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+  }
+}
+
+.containerCardHome {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--secondary-main);
+
+  border-radius: 10px;
+
+  filter: opacity(0.7);
+
+  text-align: center;
+
+  transition: 0.3s;
+  .strong {
+    font-weight: lighter;
+  }
+}
+
+.containerCardHome:hover {
+  filter: opacity(1.1);
+}
+
+.cardDescriptionHome {
+  width: 8rem;
+  display: flex;
+  flex-direction: column;
+
+  margin: 6rem 2rem;
+
+  background: var(--grey-50);
+
+  padding: 2rem 1rem;
+  border-bottom: 2px solid #ccc;
+  border-radius: 3px;
+
+  text-align: center;
+
+  strong {
+    margin-top: 5px;
+    color: var(--text-primary);
+  }
+}
+
+.homeEspecification {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+
+  padding: 3rem;
+
+  color: var(--text-primary);
+
+  span {
+    width: 50%;
+    padding: 2rem;
+
+    h1 {
+      font-weight: lighter;
+      font-style: italic;
+
+      color: var(--secondary-main);
+
+      border-bottom: 1px solid var(--secondary-dark);
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+}

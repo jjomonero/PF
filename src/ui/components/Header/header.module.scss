@@ -1,24 +1,21 @@
 .topHeader {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+
   gap: 20px;
 
-  padding: 0 2rem;
+  padding: 0 3rem;
 }
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   position: static;
   top: 0;
 
   padding: 1rem;
   background: var(--secondary-main);
-
-  .image {
-    background-color: var(--secondary-main);
-  }
 
   .buttons {
     display: flex;
@@ -27,6 +24,12 @@
 }
 
 .topInformations {
+  padding: 1rem 0;
+  .image {
+    background-color: var(--secondary-main);
+    padding: 6rem;
+  }
+
   p {
     font-size: 12px;
     color: var(--secondary-light);

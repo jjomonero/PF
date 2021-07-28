@@ -1,14 +1,12 @@
 import { FooterButton } from "./FooterButton/FooterButton";
 import Image from "next/image";
 import Link from "next/link";
-import PFLogo from "../../../../public/assets/pf-azul.jpeg";
-import FacebookIcon from "../../../../public/assets/facebookIcon.svg";
-import EmailIcon from "../../../../public/assets/emailIcon.svg";
-import LocationIcon from "../../../../public/assets/locationIcon.svg";
-import PhoneIcon from "../../../../public/assets/phoneIcon.svg";
+import PFLogo from "../../../../public/assets/pf-logo.png";
+import { PhoneCallback, LocationOn } from "@material-ui/icons";
+
+import { Email, Facebook, Instagram, WhatsApp } from "@material-ui/icons";
 
 import styles from "./footer.module.scss";
-import React from "react";
 
 export function Footer() {
   return (
@@ -16,17 +14,21 @@ export function Footer() {
       <div className={styles.container}>
         <div className={styles.left}>
           <div className={styles.location}>
-            <Image src={LocationIcon} width="20" height="20" alt="Location" />
-            <h5>
+            <LocationOn />
+            <span>
               R. Quintana, 887 <br />
               Cidade Monções - São Paulo SP <br />
               CEP: 04569-011
-            </h5>
+            </span>
           </div>
-
+          <br />
+          <br />
           <div className={styles.location}>
-            <Image src={PhoneIcon} width="20" height="20" alt="Phone" />
-            <h5>Telefone: +55 11 2196-2300</h5>
+            <PhoneCallback />
+            <span>
+              Telefone: +55 44 3531-0000 <br />
+              Whatsapp: (44)99999-9999 <br />
+            </span>
           </div>
         </div>
 
@@ -40,14 +42,27 @@ export function Footer() {
           <Image
             className={styles.image}
             src={PFLogo}
-            width="200"
-            height="100"
+            width="100"
+            height="120"
             alt="Perferro"
             objectFit="contain"
           />
           <div className={styles.icons}>
-            <FooterIcons href={"#"} src={FacebookIcon} alt={"Facebook"} />
-            <FooterIcons href={"#"} src={EmailIcon} alt={"Email"} />
+            <FooterIcons href={"#"}>
+              <WhatsApp />
+            </FooterIcons>
+
+            <FooterIcons href={"#"}>
+              <Instagram />
+            </FooterIcons>
+
+            <FooterIcons href={"#"}>
+              <Facebook />
+            </FooterIcons>
+
+            <FooterIcons href={"#"}>
+              <Email />
+            </FooterIcons>
           </div>
         </div>
       </div>
@@ -75,27 +90,17 @@ function FooterMenu() {
 
 type FooterIconsProps = {
   href: string;
-  src: any;
-  alt: string;
+  children: any;
 };
 
 //Icones das redes sociais apontando para seus links
-function FooterIcons({ href, src, alt }: FooterIconsProps) {
+function FooterIcons({ href, children }: FooterIconsProps) {
   return (
-    <>
+    <div className={styles.footerIcons}>
       <Link href={href} passHref>
-        <button className={styles.footerIcons}>
-          <Image
-            className={styles.icon}
-            src={src}
-            width="40"
-            height="40"
-            objectFit="contain"
-            alt={alt}
-          />
-        </button>
+        <span>{children}</span>
       </Link>
-    </>
+    </div>
   );
 }
 

@@ -1,0 +1,28 @@
+.container {
+  position: fixed;
+  right: 2rem;
+  bottom: 4rem;
+
+  background: #58ec44;
+
+  border: 6px solid var(--grey-50);
+  border-radius: 50%;
+
+  color: var(--grey-50);
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  .whatsapp {
+    padding: 8px;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    transition: 1s;
+  }
+
+  .whatsapp:hover {
+    transform: rotateY(180deg);
+  }
+}

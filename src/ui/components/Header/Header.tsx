@@ -2,45 +2,47 @@ import { ButtonHeader } from "./ButtonHeader/ButtonHeader";
 import { MenuProdutos } from "./MenuHeader/MenuHeader";
 import Image from "next/image";
 import Link from "next/link";
-import PFLogo from "../../../../public/assets/pf-azul.jpeg";
+import PFLogo from "../../../../public/assets/pf-logo.png";
 import styles from "./header.module.scss";
 
 export function Header(props) {
   return (
     <>
       <div className={styles.topHeader}>
-        <TopInformations
-          href={"#"}
-          title={"Vendas"}
-          information={"(44)9 9999-9999"}
-        />
-        <TopInformations
-          href={"#"}
-          title={"Assistencia técnica"}
-          information={"(44)9 9999-9999"}
-        />
-        <TopInformations
-          href={"#"}
-          title={"Whatsapp"}
-          information={"(44)9 9999-9999"}
-        />
-      </div>
-      <div className={styles.container}>
         <Image
           className={styles.image}
           src={PFLogo}
           alt=""
-          width="100"
-          height="30"
+          width="120"
+          height="60"
           objectFit="cover"
         />
-
+        <div style={{ display: "flex", gap: "20px" }}>
+          <TopInformations
+            href={"#"}
+            title={"Vendas"}
+            information={"(44)9 9999-9999"}
+          />
+          <TopInformations
+            href={"#"}
+            title={"Assistencia técnica"}
+            information={"(44)9 9999-9999"}
+          />
+          <TopInformations
+            href={"#"}
+            title={"Whatsapp"}
+            information={"(44)9 9999-9999"}
+          />
+        </div>
+      </div>
+      <div className={styles.container}>
         <div className={styles.buttons}>
-          <ButtonHeader href={"#"} name="Home" />
+          <ButtonHeader href={"/"} name="Home" />
           <MenuProdutos />
-          <ButtonHeader href={"#"} name="Quem Somos" />
-          <ButtonHeader href={"#"} name="Seja Representante" />
-          <ButtonHeader href={"#"} name="Contato" />
+          <ButtonHeader href={"/QuemSomos"} name="Quem Somos" />
+          <ButtonHeader href={"/SejaRepresentante"} name="Seja Representante" />
+          <ButtonHeader href={"/Informacao"} name="Informação" />
+          <ButtonHeader href={"/Contato"} name="Contato" />
         </div>
       </div>
     </>

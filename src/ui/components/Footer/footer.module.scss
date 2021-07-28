@@ -31,23 +31,28 @@
 
   .location {
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    gap: 1rem;
+
     color: var(--grey-50);
+
+    font-weight: lighter;
   }
 }
 
 .footerIcons {
   background-color: transparent;
+  color: var(--grey-50);
   border: none;
 
-  .icon {
-    cursor: pointer;
-  }
+  cursor: pointer;
 
-  .icon:hover {
-    filter: brightness(0.9);
-  }
+  transition: 0.3s;
+}
+
+.footerIcons:hover {
+  color: var(--primary-main);
 }
 
 .representante {
