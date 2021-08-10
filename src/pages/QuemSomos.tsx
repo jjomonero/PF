@@ -1,14 +1,14 @@
 import Image from "next/image";
 import styles from "../styles/quemSomos.module.scss";
 
-import Igreja from "../../public/Clientes/igreja.jpg";
-import Industria from "../../public/Clientes/industria.jpg";
-import Loja from "../../public/Clientes/loja.jpg";
-import Mecanica from "../../public/Clientes/mecanica.jpg";
-import Oficina from "../../public/Clientes/oficina.jpg";
-import Padaria from "../../public/Clientes/padaria.jpg";
+// import Igreja from "../../public/Clientes/igreja.jpg";
+// import Industria from "../../public/Clientes/industria.jpg";
+// import Loja from "../../public/Clientes/loja.jpg";
+// import Mecanica from "../../public/Clientes/mecanica.jpg";
+// import Oficina from "../../public/Clientes/oficina.jpg";
+// import Padaria from "../../public/Clientes/padaria.jpg";
 import Salao from "../../public/Clientes/salao.jpg";
-import Supermercado from "../../public/Clientes/supermercado.jpg";
+// import Supermercado from "../../public/Clientes/supermercado.jpg";
 import Link from "next/link";
 
 export default function QuemSomos(props) {
@@ -67,14 +67,14 @@ export default function QuemSomos(props) {
       <h1 className={styles.title}>Alguns dos nossos trabalhos</h1>
 
       <div className={styles.imagesSection}>
-        <Image src={Igreja} width={300} height={300} alt={"cliente"} />
-        <Image src={Industria} width={300} height={300} alt={"cliente"} />
-        <Image src={Loja} width={300} height={300} alt={"cliente"} />
-        <Image src={Mecanica} width={300} height={300} alt={"cliente"} />
-        <Image src={Oficina} width={300} height={300} alt={"cliente"} />
-        <Image src={Padaria} width={300} height={300} alt={"cliente"} />
         <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Supermercado} width={300} height={300} alt={"cliente"} />
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
       </div>
       <Link href={"/Produtos"} passHref>
         <button className={styles.button}>
