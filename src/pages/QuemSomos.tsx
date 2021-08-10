@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/quemSomos.module.scss";
 
-// import IgrejaP from "../../public/Clientes/igreja.jpg";
+import Igreja from "../../public/Clientes/igreja.jpg";
 import Industria from "../../public/Clientes/industria.jpg";
 import Loja from "../../public/Clientes/loja.jpg";
 import Mecanica from "../../public/Clientes/mecanica.jpg";
@@ -67,7 +67,7 @@ export default function QuemSomos(props) {
       <h1 className={styles.title}>Alguns dos nossos trabalhos</h1>
 
       <div className={styles.imagesSection}>
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Igreja} width={300} height={300} alt={"cliente"} />
         <Image src={Industria} width={300} height={300} alt={"cliente"} />
         <Image src={Loja} width={300} height={300} alt={"cliente"} />
         <Image src={Mecanica} width={300} height={300} alt={"cliente"} />
