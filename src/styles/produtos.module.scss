@@ -1,0 +1,38 @@
+.titleProdutos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 5rem;
+
+  h1 {
+    width: 12rem;
+
+    color: var(--secondary-dark);
+
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-dark);
+
+    font-size: 40px;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
+  }
+
+  p {
+    color: var(--text-primary);
+
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+.produtosContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10rem 5rem;
+
+  padding: 6rem 0 15rem;
+  margin: auto;
+}

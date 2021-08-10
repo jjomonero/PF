@@ -1,25 +1,12 @@
-.buttonMenu {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  background-color: var(--gray-50);
-}
-.dropDownContent {
-  position: absolute;
-  min-width: 120px;
-  max-height: 250px;
-  overflow-y: auto;
-  z-index: 1;
-  border: none;
-  background-color: var(--secondary-main);
-}
 
-.buttonMenu {
-  font-size: 14px;
-  padding: 10px;
 
+/* Dropup Button */
+.dropButton {
   color: var(--primary-main);
-  background: transparent;
+  background: var(--secondary-main);
+  font-size: 15px;
+
+  padding: 10px;
 
   border: none;
   border-bottom: 2px solid transparent;
@@ -29,7 +16,49 @@
   cursor: pointer;
 }
 
-.buttonMenu:hover {
+.dropButton:hover {
   border-bottom: 2px solid var(--primary-light);
+
+  color: var(--grey-50);
+}
+
+/* The container <div> - needed to position the dropup content */
+.dropUp {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropup content (Hidden by Default) */
+.dropUpContent {
+  display: none;
+  position: absolute;
+  top: 40px;
+  background-color: #f1f1f1;
+  max-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropup */
+.dropUpContent a {
+  color: var(--primary-main);
+  background: var(--secondary-main);
+  text-decoration: none;
+  padding: 12px 16px;
+  display: block;
+}
+
+/* Change color of dropup links on hover */
+.dropUpContent a:hover {
+  color: var(--grey-50);
+}
+
+/* Show the dropup menu on hover */
+.dropUp:hover .dropUpContent {
+  display: block;
+}
+
+/* Change the background color of the dropup button when the dropup content is shown */
+.dropUp:hover .dropButton {
   color: var(--grey-50);
 }
