@@ -1,13 +1,13 @@
 import Image from "next/image";
 import styles from "../styles/quemSomos.module.scss";
-
+import Salao from "../../public/assets/teto.jpg";
 // import Igreja from "../../public/Clientes/igreja.jpg";
 // import Industria from "../../public/Clientes/industria.jpg";
 // import Loja from "../../public/Clientes/loja.jpg";
 // import Mecanica from "../../public/Clientes/mecanica.jpg";
 // import Oficina from "../../public/Clientes/oficina.jpg";
 // import Padaria from "../../public/Clientes/padaria.jpg";
-import Salao from "../../public/Clientes/salao.jpg";
+// import Salao from "../../public/Clientes/salao.jpg";
 // import Supermercado from "../../public/Clientes/supermercado.jpg";
 import Link from "next/link";
 
