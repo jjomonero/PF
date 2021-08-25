@@ -8,12 +8,14 @@ import {
   SettingsRemote,
 } from "@material-ui/icons";
 
+import { SectionCarousel } from "../ui/components/Carousel/Carousel";
+
 import { Button } from "@material-ui/core";
 import styles from "../styles/index.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../public/assets/pf-logo.png";
-import LogoBranca from "../../public/assets/pf-logo-branca.png";
+import Salao from "../../public/assets/teto.jpg";
+
 import Especification1 from "../../public/assets/especification1.png";
 import Especification2 from "../../public/assets/especification2.png";
 
@@ -63,6 +65,8 @@ export default function Home() {
         </CardDescriptionHome>
       </div>
 
+      <SectionCarousel />
+
       <div>
         <HomeEspecification
           src={Especification1}
@@ -85,6 +89,19 @@ export default function Home() {
             "Tudo isso foi rigorosamente analisado para oferecermos um produto mais resistênte, de fácil manutenção e econômico em comparação ao ar condicionado e ótimo desempenha na climatização de ambientes."
           }
         />
+      </div>
+
+      <div className={styles.imagesSection}>
+        <h2>Alguns dos nossos trabalhos</h2>
+
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
       </div>
     </>
   );

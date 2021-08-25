@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "../styles/quemSomos.module.scss";
-import Salao from "../../public/assets/teto.jpg";
 // import Igreja from "../../public/Clientes/igreja.jpg";
 // import Industria from "../../public/Clientes/industria.jpg";
 // import Loja from "../../public/Clientes/loja.jpg";
@@ -64,18 +63,6 @@ export default function QuemSomos(props) {
         Metalúrgica, fundaram a Climatizadores PERFERRO.
       </p>
 
-      <h1 className={styles.title}>Alguns dos nossos trabalhos</h1>
-
-      <div className={styles.imagesSection}>
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-      </div>
       <Link href={"/Produtos"} passHref>
         <button className={styles.button}>
           Conheça também nossos Produtos

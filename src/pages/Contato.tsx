@@ -1,105 +1,82 @@
-import React, { useRef, useEffect } from "react";
-import { Form } from "@unform/web";
-import { Input } from "../ui/components/Form/input";
-import { Scope } from "@unform/core";
-import * as Yup from "yup";
+import React from "react";
+import { FormControl, NativeSelect, Input, Button } from "@material-ui/core";
+import emailjs from "emailjs-com";
+
 import styles from "../styles/contato.module.scss";
 
 export default function Contato() {
-  {
-    /* Ref ou referencias são muito praticas e perfomaticas na hora de acessar o valor/propriedade de cada campo */
+  const [state, setState] = React.useState({
+    age: "",
+    name: "",
+  });
+  const handleChange = (event) => {
+    setState(event.target.value);
+  };
+
+  function enviarEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "gmailMessage",
+      "contatoForm",
+      e.target,
+      "user_K6gt93bCqbsN5pD5DUDsp"
+    );
+
+    e.target.reset();
   }
-  const formRef = useRef(null);
-
-  async function handleSubmit(data, { reset }) {
-    try {
-      {
-        /* schema responsavel por percorres cada campo e exibir mensagem de aviso e erro conforme o esperado*/
-      }
-      const schema = Yup.object().shape({
-        name: Yup.string().required("o nome é obrigatório"),
-        email: Yup.string()
-          .email("Digite um email válido")
-          .required("O email e obrigatório"),
-        address: Yup.object().shape({
-          city: Yup.string()
-            .min(3, "No mínimo 3 caracteres")
-            .required("A cidade é obrigatória"),
-        }),
-      });
-
-      {
-        /* abortEarly por padrao vem como 'true' por isso altera-lo para 'false' para que a validação percorra todosos campos ao inves de somete o 1° como padrão */
-      }
-      await schema.validate(data, {
-        abortEarly: false,
-      });
-
-      console.log(data);
-
-      {
-        /* apaga as campo de  obrigatório após preencher corretamente os campos */
-      }
-      formRef.current.setErrors({});
-
-      {
-        /* reseta os campos apos envio */
-      }
-      reset();
-
-      {
-        /* validação de erros */
-      }
-    } catch (err) {
-      if (err instanceof Yup.ValidationError) {
-        const errorMessages = {};
-
-        err.inner.forEach((error) => {
-          errorMessages[error.path] = error.message;
-        });
-
-        formRef.current.setErrors(errorMessages);
-      }
-    }
-  }
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     formRef.current.setData({
-  //       name: "Joao Pedro",
-  //       email: "jfreitasdancer@gmail.com",
-  //       address: {
-  //         street: "Rua Palumbo",
-  //       },
-  //     });
-  //   }, 2000);
-  // }, []);
 
   return (
-    <div className={styles.App}>
-      <h1> Contato</h1>
-      <span>
-        Preencha os campos abaixo com seus dados.
-        <br /> Após clique para enviar!
-      </span>
+    <div>
+      <div className={styles.title}>
+        <h1> Fale Conosco</h1>
+        <p>Preencha os campos abaixo e clique em enviar.</p>
+      </div>
 
-      <Form ref={formRef} onSubmit={handleSubmit}>
-        {/* initialData sao os dados exibidos assim que o imput é formado*/}
-        <Input name="name" placeholder="Nome" />
-        <Input type="email" name="email" placeholder="Email" />
-        {/* <Input type="password" name="password" placeholder="Password"/> */}
-        <Scope path="address">
-          {/*abre um escopo onde todos os inputs ficam acoplados a este caminho, deixando mais legivel*/}
-          <Input name="street" placeholder="Rua" />
-          <Input name="number" placeholder="Número" />
-          <Input name="neighborhood" placeholder="Bairro" />
-          <Input name="city" placeholder="Cidade" />
-          <Input name="state" placeholder="Estado" />
-        </Scope>
-        <button className={styles.submit} type="submit">
-          Enviar
-        </button>
-      </Form>
+      <div className={styles.root}>
+        <form className={styles.forms} onSubmit={enviarEmail}>
+          <Input className={styles.Input} name="nome" placeholder="Nome" />
+          <Input className={styles.Input} name="email" placeholder="E-mail" />
+          <Input
+            className={styles.Input}
+            name="telefone"
+            placeholder="Telefone"
+            type="tel"
+          />
+          <Input className={styles.Input} name="cidade" placeholder="Cidade" />
+          <Input className={styles.Input} name="estado" placeholder="Estado" />
+
+          <FormControl variant="standard">
+            <NativeSelect
+              className={styles.input}
+              name="selecao"
+              value={state.age}
+              onChange={handleChange}
+            >
+              <option value="" disabled>
+                Selecione um Assunto
+              </option>
+              <option value="Orçamento">Orçamento</option>
+              <option value="Informações">Informações</option>
+              <option value="Dúvidas">Dúvidas</option>
+              <option value="Financeiro">Financeiro</option>
+            </NativeSelect>
+          </FormControl>
+          <Input
+            className={styles.Input}
+            name="mensagem"
+            placeholder="Mensagem"
+            multiline
+            rowsMin={2}
+            maxRows={5}
+            type="text"
+          />
+
+          <button className={styles.button} type="submit">
+            enviar
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

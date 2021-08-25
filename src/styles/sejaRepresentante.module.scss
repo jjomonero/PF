@@ -1,15 +1,79 @@
-.sejaRepresentanteContainer {
-  width: 100%;
-  height: 100vh;
+.title {
+  margin: auto;
+  text-align: center;
+
+  h1 {
+    color: var(--secondary-dark);
+    padding: 20px;
+    font-weight: bolder;
+    font-size: 38px;
+    font-family: monospace;
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: #666666;
+    font-size: 1.2em;
+  }
+}
+
+.root {
+  width: 60rem;
+  text-align: center;
+  margin: auto;
+}
+.forms {
+  max-width: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: 15px;
+  margin: auto;
+
+  padding: 2rem;
+}
+.input {
+  width: 100%;
+  margin: auto;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.button {
+  width: 10em;
+  margin: 10px auto;
+
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
 
   background: var(--secondary-main);
-  color: var(--primary-main);
-  border: 1px solid var(--primary-main);
-  border-left: none;
-  border-right: none;
-  border-top: none;
+  color: var(--grey-50);
+
+  font-size: 18px;
+  font-weight: bolder;
+
+  transition: 0.6s;
+
+  cursor: pointer;
+  &:hover {
+    background: var(--secondary-dark);
+  }
+}
+
+.sectionTop {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+  padding-top: 5rem;
+}
+
+.sectionBottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+
+  padding: 0 3rem;
 }
