@@ -102,11 +102,11 @@ export default function FullWidthTabs() {
             variant="fullWidth"
             aria-label="full width tabs example"
           >
-            <Tab label="CP600" {...a11yProps(0)} />
-            <Tab label="CP840" {...a11yProps(1)} />
-            <Tab label="CP1100" {...a11yProps(2)} />
-            <Tab label="CP1400" {...a11yProps(3)} />
-            <Tab label="XL80" {...a11yProps(4)} />
+            <Tab label="CP600" {...a11yProps(0)} id="CP600" />
+            <Tab label="CP840" {...a11yProps(1)} id="CP840" />
+            <Tab label="CP1100" {...a11yProps(2)} id="CP1100" />
+            <Tab label="CP1400" {...a11yProps(3)} id="CP1400" />
+            <Tab label="XL80" {...a11yProps(4)} id="XL80" />
           </Tabs>
         </AppBar>
 
@@ -163,6 +163,7 @@ export default function FullWidthTabs() {
             image3={CP1100_3}
             image4={CP1100_4}
             image5={CP1100_5}
+            id="CP1100"
           >
             <DescriptionProdutos
               title={"CP1100"}
@@ -263,7 +264,7 @@ ImageTabPanel.propTypes = {
 //     "aria-controls": `vertical-tabpanel-${index}`,
 //   };
 // }
-type ImageTabPanelProps = {
+type ImageTabProps = {
   image1?: any;
   image2?: any;
   image3?: any;
@@ -272,6 +273,7 @@ type ImageTabPanelProps = {
   image6?: any;
   image7?: any;
   children?: any;
+  id?: string;
 };
 
 function ImageTab({
@@ -283,7 +285,7 @@ function ImageTab({
   image6,
   image7,
   children,
-}: ImageTabPanelProps) {
+}: ImageTabProps) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {

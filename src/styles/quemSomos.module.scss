@@ -4,17 +4,14 @@
   justify-content: center;
   align-items: center;
 
-  padding: 5rem 10rem;
+  padding: 4rem 10rem 5rem;
 
   .title {
-    padding: 1rem 0 0;
-    border-bottom: 1px solid var(--secondary-dark);
-
     color: var(--secondary-main);
 
     font-size: 40px;
-    font-weight: lighter;
-    font-style: italic;
+    font-weight: bold;
+    font-family: monospace;
   }
 
   .text {
@@ -28,11 +25,11 @@
     border-radius: 5px;
 
     color: #fff;
-    background-color: var(--primary-dark);
+    background-color: var(--primary-main);
 
     font-size: 18px;
 
-    filter: contrast(1.6);
+    filter: contrast(1.1);
 
     box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.2);
 

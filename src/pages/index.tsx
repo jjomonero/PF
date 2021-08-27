@@ -10,11 +10,16 @@ import {
 
 import { SectionCarousel } from "../ui/components/Carousel/Carousel";
 
-import { Button } from "@material-ui/core";
 import styles from "../styles/index.module.scss";
 import Image from "next/image";
-import Link from "next/link";
-import Salao from "../../public/assets/teto.jpg";
+import Igreja from "../../public/assets/Clientes/igreja.jpg";
+import Salao from "../../public/assets/Clientes/salao.jpg";
+import Mecanica from "../../public/assets/Clientes/mecanica.jpg";
+import Industria from "../../public/assets/Clientes/industria.jpg";
+import Oficina from "../../public/assets/Clientes/oficina.jpg";
+import Padaria from "../../public/assets/Clientes/padaria.jpg";
+import Supermercado from "../../public/assets/Clientes/supermercado.jpg";
+import Loja from "../../public/assets/Clientes/loja.jpg";
 
 import Especification1 from "../../public/assets/especification1.png";
 import Especification2 from "../../public/assets/especification2.png";
@@ -23,106 +28,100 @@ export default function Home() {
   return (
     <>
       <div className={styles.container}>
-        <h1>Climatizadores Perferro</h1>
-        <div className={styles.cards}>
+        <h1 className={styles.titleHome}>Climatizadores Perferro</h1>
+        {/* <div className={styles.cards}>
           <CardHome strong={"Produtos"} href="#" />
           <CardHome strong={"Informações"} href="/Informacao" />
           <CardHome strong={"Seja Representante"} href="/SejaRepresentante" />
           <CardHome strong={"Contato"} href="/Contato" />
+        </div> */}
+
+        <div className={styles.descriptionProdutosHome}>
+          <CardDescriptionHome strong={"Economia"}>
+            <BatteryChargingFull color="primary" />
+          </CardDescriptionHome>
+
+          <CardDescriptionHome strong={"Ecológico"}>
+            <Eco color="primary" />
+          </CardDescriptionHome>
+
+          <CardDescriptionHome strong={"Bem Estar"}>
+            <WhatshotOutlined color="primary" />
+            <AcUnit color="primary" />
+          </CardDescriptionHome>
+
+          <CardDescriptionHome strong={"Sem Dengue"}>
+            <FormatColorReset color="primary" />
+          </CardDescriptionHome>
+
+          <CardDescriptionHome strong={"Durabilidade"}>
+            <EnhancedEncryption color="primary" />
+          </CardDescriptionHome>
+
+          <CardDescriptionHome strong={"Praticidade"}>
+            <SettingsRemote color="primary" />
+          </CardDescriptionHome>
         </div>
-      </div>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          padding: "1rem",
-        }}
-      >
-        <CardDescriptionHome strong={"Economia"}>
-          <BatteryChargingFull />
-        </CardDescriptionHome>
+        {/* <SectionCarousel /> */}
 
-        <CardDescriptionHome strong={"Ecológico"}>
-          <Eco />
-        </CardDescriptionHome>
+        <div>
+          <HomeEspecification
+            src={Especification1}
+            title={"Quem Somos"}
+            text={
+              "Os Climatizadores Perferro são fabricados com caixa de fibra de vidro, um material altamente resistente e que nao enferruja, suas colmeias reduzem a temperatura, limpa e hidrata o ar deixando seu ambiente mais agradável."
+            }
+            text2={
+              "Tudo isso foi rigorosamente analisado para oferecermos um produto mais resistênte, de fácil manutenção e econômico em comparação ao ar condicionado e ótimo desempenha na climatização de ambientes."
+            }
+          />
 
-        <CardDescriptionHome strong={"Bem Estar"}>
-          <WhatshotOutlined />
-          <AcUnit />
-        </CardDescriptionHome>
+          <HomeEspecification
+            src={Especification2}
+            title={"Quem Somos"}
+            text={
+              "Os Climatizadores Perferro são fabricados com caixa de fibra de vidro, um material altamente resistente e que nao enferruja, suas colmeias reduzem a temperatura, limpa e hidrata o ar deixando seu ambiente mais agradável"
+            }
+            text2={
+              "Tudo isso foi rigorosamente analisado para oferecermos um produto mais resistênte, de fácil manutenção e econômico em comparação ao ar condicionado e ótimo desempenha na climatização de ambientes."
+            }
+          />
+        </div>
 
-        <CardDescriptionHome strong={"Sem Dengue"}>
-          <FormatColorReset />
-        </CardDescriptionHome>
+        <div className={styles.imagesSection}>
+          <h2>Alguns dos nossos trabalhos</h2>
 
-        <CardDescriptionHome strong={"Durabilidade"}>
-          <EnhancedEncryption />
-        </CardDescriptionHome>
-
-        <CardDescriptionHome strong={"Praticidade"}>
-          <SettingsRemote />
-        </CardDescriptionHome>
-      </div>
-
-      <SectionCarousel />
-
-      <div>
-        <HomeEspecification
-          src={Especification1}
-          title={"Quem Somos"}
-          text={
-            "Os Climatizadores Perferro são fabricados com caixa de fibra de vidro, um material altamente resistente e que nao enferruja, suas colmeias reduzem a temperatura, limpa e hidrata o ar deixando seu ambiente mais agradável."
-          }
-          text2={
-            "Tudo isso foi rigorosamente analisado para oferecermos um produto mais resistênte, de fácil manutenção e econômico em comparação ao ar condicionado e ótimo desempenha na climatização de ambientes."
-          }
-        />
-
-        <HomeEspecification
-          src={Especification2}
-          title={"Quem Somos"}
-          text={
-            "Os Climatizadores Perferro são fabricados com caixa de fibra de vidro, um material altamente resistente e que nao enferruja, suas colmeias reduzem a temperatura, limpa e hidrata o ar deixando seu ambiente mais agradável"
-          }
-          text2={
-            "Tudo isso foi rigorosamente analisado para oferecermos um produto mais resistênte, de fácil manutenção e econômico em comparação ao ar condicionado e ótimo desempenha na climatização de ambientes."
-          }
-        />
-      </div>
-
-      <div className={styles.imagesSection}>
-        <h2>Alguns dos nossos trabalhos</h2>
-
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
-        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+          <Image src={Salao} width={300} height={300} alt={"cliente"} />
+          <Image src={Industria} width={300} height={300} alt={"cliente"} />
+          <Image src={Supermercado} width={300} height={300} alt={"cliente"} />
+          <Image src={Igreja} width={300} height={300} alt={"cliente"} />
+          <Image src={Oficina} width={300} height={300} alt={"cliente"} />
+          <Image src={Loja} width={300} height={300} alt={"cliente"} />
+          <Image src={Mecanica} width={300} height={300} alt={"cliente"} />
+          <Image src={Padaria} width={300} height={300} alt={"cliente"} />
+        </div>
       </div>
     </>
   );
 }
 
-type CardHomeProps = {
-  strong: string;
-  href: string;
-};
+// type CardHomeProps = {
+//   strong: string;
+//   href: string;
+// };
 
-function CardHome({ strong, href }: CardHomeProps) {
-  return (
-    <div className={styles.containerCardHome}>
-      <Link href={href} passHref>
-        <Button className={styles.strong}>
-          <strong>{strong}</strong>
-        </Button>
-      </Link>
-    </div>
-  );
-}
+// function CardHome({ strong, href }: CardHomeProps) {
+//   return (
+//     <div className={styles.containerCardHome}>
+//       <Link href={href} passHref>
+//         <Button className={styles.strong}>
+//           <strong>{strong}</strong>
+//         </Button>
+//       </Link>
+//     </div>
+//   );
+// }
 
 type CardDescriptionHomeProps = {
   children: any;
@@ -153,7 +152,7 @@ function HomeEspecification({
 }: HomeEspecificationProps) {
   return (
     <div className={styles.homeEspecification}>
-      <Image src={src} width={700} height={600} alt={""} />
+      <Image src={src} width={500} height={500} alt={""} />
       <span>
         <h1>{title}</h1>
         <p>{text}</p>

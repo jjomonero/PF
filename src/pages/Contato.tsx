@@ -27,34 +27,74 @@ export default function Contato() {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.title}>
         <h1> Fale Conosco</h1>
-        <p>Preencha os campos abaixo e clique em enviar.</p>
+        <p>(Todos os campos são de preenchimento obrigatório)</p>
       </div>
 
       <div className={styles.root}>
         <form className={styles.forms} onSubmit={enviarEmail}>
-          <Input className={styles.Input} name="nome" placeholder="Nome" />
-          <Input className={styles.Input} name="email" placeholder="E-mail" />
-          <Input
-            className={styles.Input}
-            name="telefone"
-            placeholder="Telefone"
-            type="tel"
-          />
-          <Input className={styles.Input} name="cidade" placeholder="Cidade" />
-          <Input className={styles.Input} name="estado" placeholder="Estado" />
+          <label htmlFor="nome">
+            Nome: <span>*</span>
+          </label>
+          <Input className={styles.Input} name="nome" required />
+          <label htmlFor="email">
+            E-mail: <span>*</span>
+          </label>
+          <Input className={styles.Input} name="email" required />
+          <label htmlFor="telefone">
+            Telefone: <span>*</span>
+          </label>
+          <Input className={styles.Input} name="telefone" type="tel" required />
+          <label htmlFor="cidade">
+            Cidade: <span>*</span>
+          </label>
+          <Input className={styles.Input} name="cidade" required />
+          <label htmlFor="estado">
+            Estado: <span>*</span>
+          </label>
+          <Input className={styles.Input} name="estado" required />
 
+          <label htmlFor="selecao">
+            Como nos conheceu?: <span>*</span>
+          </label>
           <FormControl variant="standard">
             <NativeSelect
               className={styles.input}
-              name="selecao"
+              name="selecaoComoNosConheceu"
               value={state.age}
               onChange={handleChange}
+              required
             >
               <option value="" disabled>
-                Selecione um Assunto
+                --selecione--
+              </option>
+              <option value="Busca do Google">Busca do Google</option>
+              <option value="Outros Buscadores">Outros Buscadores </option>
+              <option value="Links Patrocinados">Links Patrocinados </option>
+              <option value="Outros Anúncios">Outros Anúncios </option>
+              <option value="Facebook">Facebook </option>
+              <option value="Instagram">Instagram </option>
+              <option value="Google+">Google+ </option>
+              <option value="Indicação">Indicação </option>
+              <option value="Outros">Outros </option>
+            </NativeSelect>
+          </FormControl>
+
+          <label htmlFor="selecao">
+            Selecione um assunto: <span>*</span>
+          </label>
+          <FormControl variant="standard">
+            <NativeSelect
+              className={styles.input}
+              name="selecaoAssunto"
+              value={state.age}
+              onChange={handleChange}
+              required
+            >
+              <option value="" disabled>
+                --selecione--
               </option>
               <option value="Orçamento">Orçamento</option>
               <option value="Informações">Informações</option>
@@ -62,14 +102,17 @@ export default function Contato() {
               <option value="Financeiro">Financeiro</option>
             </NativeSelect>
           </FormControl>
+
+          <label htmlFor="mensagem">
+            a) Mensagem: <span>*</span>
+          </label>
           <Input
             className={styles.Input}
             name="mensagem"
-            placeholder="Mensagem"
             multiline
-            rowsMin={2}
-            maxRows={5}
+            rows={3}
             type="text"
+            required
           />
 
           <button className={styles.button} type="submit">

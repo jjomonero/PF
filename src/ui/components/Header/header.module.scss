@@ -15,7 +15,7 @@
   top: 0;
 
   padding: 1rem;
-  background: var(--secondary-main);
+  background: var(--grey-50);
 
   .buttons {
     display: flex;
@@ -38,5 +38,19 @@
     strong {
       color: var(--primary-dark);
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .topHeader {
+    display: none;
+  }
+
+  .container {
+    display: none;
+  }
+
+  .topInformations {
+    display: none;
   }
 }

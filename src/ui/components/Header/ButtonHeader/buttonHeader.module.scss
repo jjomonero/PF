@@ -1,8 +1,8 @@
 .button {
-  font-size: 15px;
+  font-size: 18px;
   padding: 10px;
 
-  color: var(--primary-main);
+  color: var(--secondary-main);
   background: transparent;
 
   border: none;
@@ -14,7 +14,5 @@
 }
 
 .button:hover {
-  color: var(--grey-50);
-
   border-bottom: 2px solid var(--primary-light);
 }
