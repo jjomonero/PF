@@ -25,7 +25,7 @@ export default function SejaRepresentante() {
         "gmailMessage",
         "sejaRepresentanteForm",
         e.target,
-        "user_K6gt93bCqbsN5pD5DUDsp"
+        process.env.EMAILJS_API_KEY_SEJAREPRESENTANTE
       )
       .then(
         (result) => {

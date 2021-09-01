@@ -23,18 +23,23 @@ import Loja from "../../public/assets/Clientes/loja.jpg";
 
 import Especification1 from "../../public/assets/especification1.png";
 import Especification2 from "../../public/assets/especification2.png";
+import Climatizadores from "../../public/assets/prod.png";
+import GuiasPerferro from "../../public/assets/guiasPerferro.png";
 
 export default function Home() {
   return (
     <>
       <div className={styles.container}>
         <h1 className={styles.titleHome}>Climatizadores Perferro</h1>
-        {/* <div className={styles.cards}>
-          <CardHome strong={"Produtos"} href="#" />
-          <CardHome strong={"Informações"} href="/Informacao" />
-          <CardHome strong={"Seja Representante"} href="/SejaRepresentante" />
-          <CardHome strong={"Contato"} href="/Contato" />
-        </div> */}
+
+        <div className={styles.climatizadores}>
+          <Image
+            src={Climatizadores}
+            width="800"
+            height="500"
+            alt="climatizadores"
+          />
+        </div>
 
         <div className={styles.descriptionProdutosHome}>
           <CardDescriptionHome strong={"Economia"}>
@@ -63,8 +68,6 @@ export default function Home() {
           </CardDescriptionHome>
         </div>
 
-        {/* <SectionCarousel /> */}
-
         <div>
           <HomeEspecification
             src={Especification1}
@@ -86,6 +89,15 @@ export default function Home() {
             text2={
               "Tudo isso foi rigorosamente analisado para oferecermos um produto mais resistênte, de fácil manutenção e econômico em comparação ao ar condicionado e ótimo desempenha na climatização de ambientes."
             }
+          />
+        </div>
+
+        <div className={styles.guias}>
+          <Image
+            src={GuiasPerferro}
+            width="1200"
+            height="400"
+            alt="climatizadores"
           />
         </div>
 

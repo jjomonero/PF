@@ -1,5 +1,5 @@
 import React from "react";
-import { FormControl, NativeSelect, Input, Button } from "@material-ui/core";
+import { FormControl, NativeSelect, Input } from "@material-ui/core";
 import emailjs from "emailjs-com";
 
 import styles from "../styles/contato.module.scss";
@@ -20,7 +20,7 @@ export default function Contato() {
       "gmailMessage",
       "contatoForm",
       e.target,
-      "user_K6gt93bCqbsN5pD5DUDsp"
+      process.env.EMAILJS_API_KEY_CONTATO
     );
 
     e.target.reset();

@@ -2,18 +2,9 @@
   display: flex;
   flex-direction: column;
   margin: 2rem;
-  // .strong {
-  //   color: var(--primary-main);
-  //   background: var(--secondary-main);
-  // }
-  // display: flex;
-  // flex-direction: column;
-
-  // justify-content: center;
-  // align-items: center;
 
   .titleHome {
-    padding: 7rem;
+    padding: 7rem 9rem;
     margin: 0 auto;
     color: var(--secondary-main);
     font-style: italic;
@@ -24,12 +15,10 @@
     background-size: 100%;
   }
 
-  // .cards {
-  //   display: flex;
-  //   flex-direction: column;
-
-  //   gap: 20px;
-  // }
+  .climatizadores {
+    margin: auto;
+    padding: 0 6rem;
+  }
 
   .descriptionProdutosHome {
     display: flex;
@@ -37,29 +26,6 @@
     padding: 1rem;
     margin: 0 auto;
   }
-
-  // .containerCardHome {
-  //   width: 20rem;
-  //   display: flex;
-  //   flex-direction: column;
-
-  //   background: var(--secondary-main);
-
-  //   border-radius: 10px;
-
-  //   filter: brightness(1);
-
-  //   text-align: center;
-
-  //   transition: 0.6s;
-  //   .strong {
-  //     font-weight: lighter;
-  //   }
-  // }
-
-  // .containerCardHome:hover {
-  //   filter: brightness(1.5);
-  // }
 
   .cardDescriptionHome {
     width: 8rem;
@@ -111,6 +77,11 @@
     }
   }
 
+  .guias {
+    padding: 8rem 4rem;
+    margin: auto;
+  }
+
   .imagesSection {
     display: grid;
     grid-template-columns: 3fr 3fr 3fr;
@@ -124,7 +95,6 @@
 
     h2 {
       padding-top: 6rem;
-      // margin-top: 5rem;
       height: 4rem;
 
       font-weight: lighter;
@@ -152,6 +122,20 @@
       transition-delay: 0.3s;
 
       transform: scale(1);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+    margin: 0 auto;
+
+    .titleHome {
+      padding: 0 10rem;
     }
   }
 }

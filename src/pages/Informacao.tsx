@@ -52,17 +52,7 @@ export default function VerticalTabs() {
 
   return (
     <>
-      <h1
-        style={{
-          textAlign: "center",
-          color: "var(--secondary-main)",
-          fontSize: "38px",
-          fontFamily: "monospace",
-          padding: "4rem 0 2rem",
-        }}
-      >
-        Informações
-      </h1>
+      <h1 className={styles.title}>Informações</h1>
       <div className={styles.root}>
         <Tabs
           orientation="vertical"
@@ -81,83 +71,85 @@ export default function VerticalTabs() {
           <Tab label="Precauções e Cuidados" {...a11yProps(5)} />
           <Tab label="Dúvidas Frequentes" {...a11yProps(6)} />
         </Tabs>
-        <TabPanel value={value} index={0}>
-          <h3>Climatizadores de Parede</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-          voluptatum minus laboriosam ipsa eius, unde dolor praesentium vero
-          quis beatae ratione necessitatibus alias ex repudiandae nisi itaque?
-          Dicta, quasi sit?
-          <ButtonDownloadPDF
-            pdf={"/assets/instrucao.pdf"}
-            pdfName={"Manual de Instrução"}
-          />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <h3>Climatizadores de Teto</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-          voluptatum minus laboriosam ipsa eius, unde dolor praesentium vero
-          quis beatae ratione necessitatibus alias ex repudiandae nisi itaque?
-          Dicta, quasi sit?
-          <ButtonDownloadPDF
-            pdf={"/assets/instrucao.pdf"}
-            pdfName={"Manual de Instrução"}
-          />
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          <h3>Climatizador de Portátil</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-          voluptatum minus laboriosam ipsa eius, unde dolor praesentium vero
-          quis beatae ratione necessitatibus alias ex repudiandae nisi itaque?
-          Dicta, quasi sit?
-          <ButtonDownloadPDF
-            pdf={"/assets/instrucao.pdf"}
-            pdfName={"Manual de Instrução"}
-          />
-        </TabPanel>
-        <TabPanel value={value} index={3}>
-          <h3>Climatizador Comercial</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-          voluptatum minus laboriosam ipsa eius, unde dolor praesentium vero
-          quis beatae ratione necessitatibus alias ex repudiandae nisi itaque?
-          Dicta, quasi sit?
-          <ButtonDownloadPDF
-            pdf={"/assets/instrucao.pdf"}
-            pdfName={"Manual de Instrução"}
-          />
-        </TabPanel>
-        <TabPanel value={value} index={4}>
-          <h3>Climatizador Familiar</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-          voluptatum minus laboriosam ipsa eius, unde dolor praesentium vero
-          quis beatae ratione necessitatibus alias ex repudiandae nisi itaque?
-          Dicta, quasi sit?
-          <ButtonDownloadPDF
-            pdf={"/assets/instrucao.pdf"}
-            pdfName={"Manual de Instrução"}
-          />
-        </TabPanel>
-        <TabPanel value={value} index={5}>
-          <h3>Precauções e Cuidados</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-          voluptatum minus laboriosam ipsa eius, unde dolor praesentium vero
-          quis beatae ratione necessitatibus alias ex repudiandae nisi itaque?
-          Dicta, quasi sit?
-          <ButtonDownloadPDF
-            pdf={"/assets/instrucao.pdf"}
-            pdfName={"Manual de Instrução"}
-          />
-        </TabPanel>
-        <TabPanel value={value} index={6}>
-          <h3>Dúvidas Frequêntes</h3>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-          voluptatum minus laboriosam ipsa eius, unde dolor praesentium vero
-          quis beatae ratione necessitatibus alias ex repudiandae nisi itaque?
-          Dicta, quasi sit?
-          <ButtonDownloadPDF
-            pdf={"/assets/instrucao.pdf"}
-            pdfName={"Manual de Instrução"}
-          />
-        </TabPanel>
+        <div className={styles.tabPanel}>
+          <TabPanel value={value} index={0}>
+            <h3>Climatizadores de Parede</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            voluptatum minus laboriosam ipsa eius, unde dolor praesentium vero
+            quis beatae ratione necessitatibus alias ex repudiandae nisi itaque?
+            Dicta, quasi sit?
+            <ButtonDownloadPDF
+              pdf={"/assets/instrucao.pdf"}
+              pdfName={"Manual de Instrução"}
+            />
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <h3>Climatizadores de Teto</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            voluptatum minus laboriosam ipsa eius, unde dolor praesentium vero
+            quis beatae ratione necessitatibus alias ex repudiandae nisi itaque?
+            Dicta, quasi sit?
+            <ButtonDownloadPDF
+              pdf={"/assets/instrucao.pdf"}
+              pdfName={"Manual de Instrução"}
+            />
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <h3>Climatizador de Portátil</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            voluptatum minus laboriosam ipsa eius, unde dolor praesentium vero
+            quis beatae ratione necessitatibus alias ex repudiandae nisi itaque?
+            Dicta, quasi sit?
+            <ButtonDownloadPDF
+              pdf={"/assets/instrucao.pdf"}
+              pdfName={"Manual de Instrução"}
+            />
+          </TabPanel>
+          <TabPanel value={value} index={3}>
+            <h3>Climatizador Comercial</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            voluptatum minus laboriosam ipsa eius, unde dolor praesentium vero
+            quis beatae ratione necessitatibus alias ex repudiandae nisi itaque?
+            Dicta, quasi sit?
+            <ButtonDownloadPDF
+              pdf={"/assets/instrucao.pdf"}
+              pdfName={"Manual de Instrução"}
+            />
+          </TabPanel>
+          <TabPanel value={value} index={4}>
+            <h3>Climatizador Familiar</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            voluptatum minus laboriosam ipsa eius, unde dolor praesentium vero
+            quis beatae ratione necessitatibus alias ex repudiandae nisi itaque?
+            Dicta, quasi sit?
+            <ButtonDownloadPDF
+              pdf={"/assets/instrucao.pdf"}
+              pdfName={"Manual de Instrução"}
+            />
+          </TabPanel>
+          <TabPanel value={value} index={5}>
+            <h3>Precauções e Cuidados</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            voluptatum minus laboriosam ipsa eius, unde dolor praesentium vero
+            quis beatae ratione necessitatibus alias ex repudiandae nisi itaque?
+            Dicta, quasi sit?
+            <ButtonDownloadPDF
+              pdf={"/assets/instrucao.pdf"}
+              pdfName={"Manual de Instrução"}
+            />
+          </TabPanel>
+          <TabPanel value={value} index={6}>
+            <h3>Dúvidas Frequêntes</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            voluptatum minus laboriosam ipsa eius, unde dolor praesentium vero
+            quis beatae ratione necessitatibus alias ex repudiandae nisi itaque?
+            Dicta, quasi sit?
+            <ButtonDownloadPDF
+              pdf={"/assets/instrucao.pdf"}
+              pdfName={"Manual de Instrução"}
+            />
+          </TabPanel>
+        </div>
       </div>
     </>
   );
