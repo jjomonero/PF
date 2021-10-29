@@ -1,0 +1,37 @@
+{
+  "produto": [
+    {
+      "id": "61120717",
+      "name": "CP900",
+      "imageprincipal": {
+        "url": "https://www.datocms-assets.com/54779/1632862764-cp600-001.png"
+      },
+      "images": [
+        {
+          "url": "https://www.datocms-assets.com/54779/1632862766-cp600-001.png"
+        },
+        {
+          "url": "https://www.datocms-assets.com/54779/1632862785-cp600-002.png"
+        },
+        {
+          "url": "https://www.datocms-assets.com/54779/1632862803-cp600-003.png"
+        },
+        {
+          "url": "https://www.datocms-assets.com/54779/1632862839-cp600-004.png"
+        },
+        {
+          "url": "https://www.datocms-assets.com/54779/1632862864-cp600-005.png"
+        }
+      ],
+      "vazao": "151515",
+      "dimensao": "151",
+      "abertura": "15151",
+      "detalhe": "11slkdaldxnszjxc asm ds  jajansnd asd sahda dpoakposjfnf e kas ",
+      "seoMetaTag": {
+        "description": "o meljor",
+        "title": "CP900",
+        "twitterCard": null
+      }
+    }
+  ]
+}

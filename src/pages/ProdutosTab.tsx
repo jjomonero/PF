@@ -109,7 +109,6 @@ export default function FullWidthTabs() {
             <Tab label="XL80" {...a11yProps(4)} id="XL80" />
           </Tabs>
         </AppBar>
-
         <TabPanel value={value} index={0}>
           <ImageTab
             image1={CP600_1}
@@ -132,7 +131,6 @@ export default function FullWidthTabs() {
             />
           </ImageTab>
         </TabPanel>
-
         <TabPanel value={value} index={1}>
           <ImageTab
             image1={CP840_1}
@@ -155,7 +153,6 @@ export default function FullWidthTabs() {
             />
           </ImageTab>
         </TabPanel>
-
         <TabPanel value={value} index={2}>
           <ImageTab
             image1={CP1100_1}
@@ -179,7 +176,6 @@ export default function FullWidthTabs() {
             />
           </ImageTab>
         </TabPanel>
-
         <TabPanel value={value} index={3}>
           <ImageTab
             image1={CP1400_1}
@@ -203,7 +199,6 @@ export default function FullWidthTabs() {
             />
           </ImageTab>
         </TabPanel>
-
         <TabPanel value={value} index={4}>
           <ImageTab
             image1={XL80_1}

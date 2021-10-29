@@ -8,8 +8,6 @@ import {
   SettingsRemote,
 } from "@material-ui/icons";
 
-import { SectionCarousel } from "../ui/components/Carousel/Carousel";
-
 import styles from "../styles/index.module.scss";
 import Image from "next/image";
 import Igreja from "../../public/assets/Clientes/igreja.jpg";
@@ -35,7 +33,7 @@ export default function Home() {
         <div className={styles.climatizadores}>
           <Image
             src={Climatizadores}
-            width="800"
+            width="600"
             height="500"
             alt="climatizadores"
           />
@@ -117,23 +115,6 @@ export default function Home() {
     </>
   );
 }
-
-// type CardHomeProps = {
-//   strong: string;
-//   href: string;
-// };
-
-// function CardHome({ strong, href }: CardHomeProps) {
-//   return (
-//     <div className={styles.containerCardHome}>
-//       <Link href={href} passHref>
-//         <Button className={styles.strong}>
-//           <strong>{strong}</strong>
-//         </Button>
-//       </Link>
-//     </div>
-//   );
-// }
 
 type CardDescriptionHomeProps = {
   children: any;

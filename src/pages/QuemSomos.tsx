@@ -63,7 +63,7 @@ export default function QuemSomos(props) {
         Metalúrgica, fundaram a Climatizadores PERFERRO.
       </p>
 
-      <Link href={"/Produtos"} passHref>
+      <Link href={"/ProdutosTab"} passHref>
         <button className={styles.button}>
           Conheça também nossos Produtos
         </button>

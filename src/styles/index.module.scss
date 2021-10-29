@@ -17,7 +17,7 @@
 
   .climatizadores {
     margin: auto;
-    padding: 0 6rem;
+    padding: 0;
   }
 
   .descriptionProdutosHome {
@@ -126,6 +126,23 @@
   }
 }
 
+@media (max-width: 1080px) {
+  .container {
+    .descriptionProdutosHome {
+      display: grid;
+      grid-template-columns: 3fr 3fr 3fr;
+    }
+
+    .homeEspecification {
+      margin: 1rem;
+    }
+
+    .imagesSection {
+      grid-template-columns: 3fr 3fr 3fr;
+      margin: 1rem;
+    }
+  }
+}
 @media (max-width: 768px) {
   .container {
     display: grid;
