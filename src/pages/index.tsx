@@ -5,7 +5,7 @@ import {
   EnhancedEncryption,
   AcUnit,
   WhatshotOutlined,
-  SettingsRemote,
+  Build,
 } from "@material-ui/icons";
 
 import styles from "../styles/index.module.scss";
@@ -57,12 +57,12 @@ export default function Home() {
             <FormatColorReset color="primary" />
           </CardDescriptionHome>
 
-          <CardDescriptionHome strong={"Durabilidade"}>
+          <CardDescriptionHome strong={"Atendimento Para Todo o Brasil"}>
             <EnhancedEncryption color="primary" />
           </CardDescriptionHome>
 
-          <CardDescriptionHome strong={"Praticidade"}>
-            <SettingsRemote color="primary" />
+          <CardDescriptionHome strong={"Assitência Técnica"}>
+            <Build color="primary" />
           </CardDescriptionHome>
         </div>
 
