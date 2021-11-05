@@ -1,23 +1,15 @@
 import {
   BatteryChargingFull,
-  FormatColorReset,
   Eco,
-  EnhancedEncryption,
   AcUnit,
   WhatshotOutlined,
   Build,
+  LocalAirportOutlined,
+  SupervisedUserCircleSharp,
 } from "@material-ui/icons";
 
 import styles from "../styles/index.module.scss";
 import Image from "next/image";
-import Igreja from "../../public/assets/Clientes/igreja.jpg";
-import Salao from "../../public/assets/Clientes/salao.jpg";
-import Mecanica from "../../public/assets/Clientes/mecanica.jpg";
-import Industria from "../../public/assets/Clientes/industria.jpg";
-import Oficina from "../../public/assets/Clientes/oficina.jpg";
-import Padaria from "../../public/assets/Clientes/padaria.jpg";
-import Supermercado from "../../public/assets/Clientes/supermercado.jpg";
-import Loja from "../../public/assets/Clientes/loja.jpg";
 
 import Especification1 from "../../public/assets/especification1.png";
 import Especification2 from "../../public/assets/especification2.png";
@@ -41,51 +33,51 @@ export default function Home() {
 
         <div className={styles.descriptionProdutosHome}>
           <CardDescriptionHome strong={"Economia"}>
-            <BatteryChargingFull color="primary" />
+            <BatteryChargingFull color="primary" fontSize="large" />
           </CardDescriptionHome>
 
           <CardDescriptionHome strong={"Ecológico"}>
-            <Eco color="primary" />
+            <Eco color="primary" fontSize="large" />
           </CardDescriptionHome>
 
           <CardDescriptionHome strong={"Bem Estar"}>
-            <WhatshotOutlined color="primary" />
-            <AcUnit color="primary" />
+            <WhatshotOutlined color="primary" fontSize="large" />
+            <AcUnit color="primary" fontSize="large" />
           </CardDescriptionHome>
 
-          <CardDescriptionHome strong={"Sem Dengue"}>
-            <FormatColorReset color="primary" />
+          <CardDescriptionHome strong={"Produtividade"}>
+            <SupervisedUserCircleSharp color="primary" fontSize="large" />
           </CardDescriptionHome>
 
           <CardDescriptionHome strong={"Atendimento Para Todo o Brasil"}>
-            <EnhancedEncryption color="primary" />
+            <LocalAirportOutlined color="primary" fontSize="large" />
           </CardDescriptionHome>
 
           <CardDescriptionHome strong={"Assitência Técnica"}>
-            <Build color="primary" />
+            <Build color="primary" fontSize="large" />
           </CardDescriptionHome>
         </div>
 
         <div>
           <HomeEspecification
             src={Especification1}
-            title={"Quem Somos"}
+            title={"Sobre a Perferro"}
             text={
-              "Os Climatizadores Perferro são fabricados com caixa de fibra de vidro, um material altamente resistente e que nao enferruja, suas colmeias reduzem a temperatura, limpa e hidrata o ar deixando seu ambiente mais agradável."
+              "A Climatizadores Perferro é uma empresa 100% brasileira, localizada em Peabiru e especializada em fabricação de climatizadores evaporativos, atuando em todo território nacional. Oferece para seus clientes a alternativa em reduzir a temperatura do ambiente com equipamentos de alta durabilidade e tecnologia, baixo custo de manutenção e baixo impacto ao meio ambiente."
             }
             text2={
-              "Tudo isso foi rigorosamente analisado para oferecermos um produto mais resistênte, de fácil manutenção e econômico em comparação ao ar condicionado e ótimo desempenha na climatização de ambientes."
+              "Temos a missão de oferecer para nossos clientes, através da climatização do ambiente, um local mais agradável e saudável. Nossa empresa é referência no mercado nacional de climatizadores evaporativos com produtos e atendimento de qualidade, e inovações tecnológicas."
             }
           />
 
           <HomeEspecification
             src={Especification2}
-            title={"Quem Somos"}
+            title={"Sobre o Climatizador"}
             text={
-              "Os Climatizadores Perferro são fabricados com caixa de fibra de vidro, um material altamente resistente e que nao enferruja, suas colmeias reduzem a temperatura, limpa e hidrata o ar deixando seu ambiente mais agradável"
+              "Os climatizadores evaporativos PERFERRO, trabalham com resfriamento a base dae água, e seu consumo de energia é baixíssimo, trazendo menor impacto ao meio ambiente. Devido a característica do Climatizador em trabalhar com pressão positiva no ambiente, faz com que a renovação de ar com umidade seja constante. Essa pressão no ambiente se faz através de vazão de ar dos Climatizadores e com cálculo baseado nos metros cúbicos do ambiente achamos o(os) equipamento(os) ideal para o ambiente."
             }
             text2={
-              "Tudo isso foi rigorosamente analisado para oferecermos um produto mais resistênte, de fácil manutenção e econômico em comparação ao ar condicionado e ótimo desempenha na climatização de ambientes."
+              "Tudo isso foi rigorosamente analisado para oferecermos um produto mais resistênte, de fácil manutenção e econômico em comparação ao ar condicionado e ótimo desempenho na climatização de ambientes."
             }
           />
         </div>
@@ -93,23 +85,10 @@ export default function Home() {
         <div className={styles.guias}>
           <Image
             src={GuiasPerferro}
-            width="1200"
+            width="1000"
             height="400"
             alt="climatizadores"
           />
-        </div>
-
-        <div className={styles.imagesSection}>
-          <h2>Alguns dos nossos trabalhos</h2>
-
-          <Image src={Salao} width={300} height={300} alt={"cliente"} />
-          <Image src={Industria} width={300} height={300} alt={"cliente"} />
-          <Image src={Supermercado} width={300} height={300} alt={"cliente"} />
-          <Image src={Igreja} width={300} height={300} alt={"cliente"} />
-          <Image src={Oficina} width={300} height={300} alt={"cliente"} />
-          <Image src={Loja} width={300} height={300} alt={"cliente"} />
-          <Image src={Mecanica} width={300} height={300} alt={"cliente"} />
-          <Image src={Padaria} width={300} height={300} alt={"cliente"} />
         </div>
       </div>
     </>
@@ -145,7 +124,7 @@ function HomeEspecification({
 }: HomeEspecificationProps) {
   return (
     <div className={styles.homeEspecification}>
-      <Image src={src} width={500} height={500} alt={""} />
+      <Image src={src} width={400} height={400} alt={""} />
       <span>
         <h1>{title}</h1>
         <p>{text}</p>

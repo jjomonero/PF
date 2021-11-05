@@ -1,13 +1,14 @@
 import Image from "next/image";
 import styles from "../styles/quemSomos.module.scss";
-// import Igreja from "../../public/Clientes/igreja.jpg";
-// import Industria from "../../public/Clientes/industria.jpg";
-// import Loja from "../../public/Clientes/loja.jpg";
-// import Mecanica from "../../public/Clientes/mecanica.jpg";
-// import Oficina from "../../public/Clientes/oficina.jpg";
-// import Padaria from "../../public/Clientes/padaria.jpg";
-// import Salao from "../../public/Clientes/salao.jpg";
-// import Supermercado from "../../public/Clientes/supermercado.jpg";
+
+import Igreja from "../../public/assets/Clientes/igreja.jpg";
+import Salao from "../../public/assets/Clientes/salao.jpg";
+import Mecanica from "../../public/assets/Clientes/mecanica.jpg";
+import Industria from "../../public/assets/Clientes/industria.jpg";
+import Oficina from "../../public/assets/Clientes/oficina.jpg";
+import Padaria from "../../public/assets/Clientes/padaria.jpg";
+import Supermercado from "../../public/assets/Clientes/supermercado.jpg";
+import Loja from "../../public/assets/Clientes/loja.jpg";
 import Link from "next/link";
 
 export default function QuemSomos(props) {
@@ -68,6 +69,19 @@ export default function QuemSomos(props) {
           Conheça também nossos Produtos
         </button>
       </Link>
+
+      <div className={styles.imagesSection}>
+        <h2>Alguns dos nossos trabalhos</h2>
+
+        <Image src={Salao} width={300} height={300} alt={"cliente"} />
+        <Image src={Industria} width={300} height={300} alt={"cliente"} />
+        <Image src={Supermercado} width={300} height={300} alt={"cliente"} />
+        <Image src={Igreja} width={300} height={300} alt={"cliente"} />
+        <Image src={Oficina} width={300} height={300} alt={"cliente"} />
+        <Image src={Loja} width={300} height={300} alt={"cliente"} />
+        <Image src={Mecanica} width={300} height={300} alt={"cliente"} />
+        <Image src={Padaria} width={300} height={300} alt={"cliente"} />
+      </div>
     </div>
   );
 }

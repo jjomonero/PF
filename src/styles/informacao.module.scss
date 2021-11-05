@@ -1,46 +1,15 @@
-.buttonDownload {
-  position: absolute;
-  bottom: 0;
-  padding: 1rem 2rem;
-
-  border: 1px solid var(--primary-main);
-  border-radius: 5px;
-
-  text-decoration: none;
-
-  font-size: 18px;
-  font-weight: bold;
-
-  color: var(--primary-main);
-  background: var(--grey-50);
-
-  cursor: pointer;
-
-  .icon {
-    position: relative;
-    top: 5px;
-  }
-}
-.title {
-  text-align: center;
-  color: var(--secondary-main);
-  font-size: 38px;
-  font-family: monospace;
-  padding: 4rem 0 2rem;
-}
-
 .root {
   flex-grow: 1;
   background-color: #fff;
   display: flex;
   padding: 0 5rem 3rem 2rem;
-  gap: 5rem;
+  gap: 4rem;
 }
 .tabs {
   min-width: 16rem;
-  height: 20rem;
+  height: 26rem;
 
-  margin: 1rem;
+  margin: 8rem 1rem 1rem;
   border: 1px solid var(--secondary-main);
   border-radius: 8px;
 
@@ -49,8 +18,26 @@
   font-weight: bolder;
 
   color: var(--secondary-main);
+
+  .tab {
+    border-bottom: 1px solid var(--secondary-main);
+  }
 }
 
 .tabPanel {
+  margin-top: 2rem;
+  max-width: 41rem;
   color: var(--text-primary);
+
+  h3 {
+    font-size: 28px;
+    font-weight: lighter;
+    color: var(--secondary-main);
+  }
+
+  h4 {
+    font-size: 24px;
+    font-weight: lighter;
+    color: var(--secondary-main);
+  }
 }

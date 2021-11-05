@@ -1,5 +1,5 @@
 import { ButtonHeader } from "./ButtonHeader/ButtonHeader";
-import { MenuProdutos } from "./MenuHeader/MenuHeader";
+import { MenuProdutos, MenuInformacao } from "./MenuHeader/MenuHeader";
 import Image from "next/image";
 import Link from "next/link";
 import PFLogo from "../../../../public/assets/pf-logo.png";
@@ -41,7 +41,7 @@ export function Header(props) {
           <MenuProdutos />
           <ButtonHeader href={"/QuemSomos"} name="Quem Somos" />
           <ButtonHeader href={"/SejaRepresentante"} name="Seja Representante" />
-          <ButtonHeader href={"/Informacao"} name="Informação" />
+          <MenuInformacao />
           <ButtonHeader href={"/Contato"} name="Contato" />
         </div>
       </div>
