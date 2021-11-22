@@ -29,15 +29,13 @@
   max-width: 41rem;
   color: var(--text-primary);
 
-  h3 {
-    font-size: 28px;
-    font-weight: lighter;
-    color: var(--secondary-main);
+  span {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0.5rem;
   }
 
-  h4 {
-    font-size: 24px;
-    font-weight: lighter;
+  strong {
     color: var(--secondary-main);
   }
 }

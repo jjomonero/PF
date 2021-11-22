@@ -10,11 +10,12 @@ import Padaria from "../../public/assets/Clientes/padaria.jpg";
 import Supermercado from "../../public/assets/Clientes/supermercado.jpg";
 import Loja from "../../public/assets/Clientes/loja.jpg";
 import Link from "next/link";
+import { ButtonsQuemSomos } from "../ui/components/Buttons/Buttons";
 
 export default function QuemSomos(props) {
   return (
     <div className={styles.quemSomosContainer}>
-      <h1 className={styles.title}>Quem somos</h1>
+      <ButtonsQuemSomos>Quem somos</ButtonsQuemSomos>
       <p className={styles.text}>
         A mais de 10 anos desenvolvemos e aperfeiçoamos climatizadores
         evaporativos, chegando em 2015 com nossa nova linha que tráz índices
@@ -48,7 +49,7 @@ export default function QuemSomos(props) {
         respeito e superação são os pilares da Climatizadores PERFERRO.
       </p>
 
-      <h1 className={styles.title}>Nossa História</h1>
+      <ButtonsQuemSomos>Nossa História</ButtonsQuemSomos>
 
       <p className={styles.text}>
         A Climatizadores PERFERRO foi fundada em 2008 pelos irmãos Valdecir

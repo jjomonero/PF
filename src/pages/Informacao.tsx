@@ -10,7 +10,7 @@ import GetAppIcon from "@material-ui/icons/GetApp";
 import Image from "next/image";
 import Trabalhos from "../../public/assets/teto.jpg";
 import styles from "../styles/informacao.module.scss";
-
+import { Buttonsh3 } from "../ui/components/Buttons/Buttonsh3";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -181,15 +181,12 @@ export default function VerticalTabs() {
         </Tabs>
         <div className={styles.tabPanel}>
           <TabPanel value={value} index={0}>
-            <h3>Climatizador de Ambiente Industrial</h3>
-            <Image
-              width={100}
-              height={100}
-              src={Trabalhos}
-              alt="Trabalhos"
-            />{" "}
-            <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
-            <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />
+            <Buttonsh3>Climatizador de Ambiente Industrial</Buttonsh3>
+            <span>
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />
+            </span>
             <p>
               O Climatizador de Ambiente Industrial <strong>PERFERRO</strong>{" "}
               vem para solucionar de maneira inovadora e econômica o problema da
@@ -197,7 +194,7 @@ export default function VerticalTabs() {
               um maior bem estar, gerando produtividade e maior desempenho
               durante o trabalho
             </p>
-            <h4>Onde se Aplica?</h4>
+            <Buttonsh3>Onde se Aplica?</Buttonsh3>
             <p>
               O uso do climatizador é recomendado a diversos tipos de ambientes
               como: Industrias, Igrejas, Padarias, Academias, Supermercados,
@@ -208,22 +205,19 @@ export default function VerticalTabs() {
           </TabPanel>
 
           <TabPanel value={value} index={1}>
-            <h3>Climatizador de Ar Comercial</h3>
-            <Image
-              width={100}
-              height={100}
-              src={Trabalhos}
-              alt="Trabalhos"
-            />{" "}
-            <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
-            <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />
+            <Buttonsh3>Climatizador de Ar Comercial</Buttonsh3>
+            <span>
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />
+            </span>
             <p>
               O Climatizador de Ar Comercial <strong>PERFERRO</strong> traz como
               principal benefício a renavação e umidificação do ar ambiente,
               Reduzindo e, até 40% o desperdicios nos hortifrutis e outros
               produtos naturais,
             </p>
-            <h4>Onde se Aplica?</h4>
+            <Buttonsh3>Onde se Aplica?</Buttonsh3>
             <p>
               A aplicação do Climatizador de Ar Comercial é recomendado para
               Hortifrutis, Supermercados, Padarias entre outros locais onde a
@@ -232,22 +226,19 @@ export default function VerticalTabs() {
             </p>
           </TabPanel>
           <TabPanel value={value} index={2}>
-            <h3>Climatizador de Ar Industrial</h3>
-            <Image
-              width={100}
-              height={100}
-              src={Trabalhos}
-              alt="Trabalhos"
-            />{" "}
-            <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
-            <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />
+            <Buttonsh3>Climatizador de Ar Industrial</Buttonsh3>
+            <span>
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />
+            </span>
             <p>
               O Climatizador de Ar Comercial <strong>PERFERRO</strong> traz como
               principal benefício a renavação e umidificação do ar ambiente,
               Reduzindo e, até 40% o desperdicios nos hortifrutis e outros
               produtos naturais,
             </p>
-            <h4>Onde se Aplica?</h4>
+            <Buttonsh3>Onde se Aplica?</Buttonsh3>
             <p>
               A aplicação do Climatizador de Ar Comercial é recomendado para
               Hortifrutis, Supermercados, Padarias entre outros locais onde a
@@ -256,22 +247,19 @@ export default function VerticalTabs() {
             </p>
           </TabPanel>
           <TabPanel value={value} index={3}>
-            <h3>Climatizador de Parede</h3>
-            <Image
-              width={100}
-              height={100}
-              src={Trabalhos}
-              alt="Trabalhos"
-            />{" "}
-            <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
-            <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />
+            <Buttonsh3>Climatizador de Parede</Buttonsh3>
+            <span>
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />
+            </span>
             <p>
               O Climatizador de Ar Comercial <strong>PERFERRO</strong> traz como
               principal benefício a renavação e umidificação do ar ambiente,
               Reduzindo e, até 40% o desperdicios nos hortifrutis e outros
               produtos naturais,
             </p>
-            <h4>Onde se Aplica?</h4>
+            <Buttonsh3>Onde se Aplica?</Buttonsh3>
             <p>
               A aplicação do Climatizador de Ar Comercial é recomendado para
               Hortifrutis, Supermercados, Padarias entre outros locais onde a
@@ -280,22 +268,19 @@ export default function VerticalTabs() {
             </p>
           </TabPanel>
           <TabPanel value={value} index={4}>
-            <h3>Climatizador de Parede Comercial</h3>
-            <Image
-              width={100}
-              height={100}
-              src={Trabalhos}
-              alt="Trabalhos"
-            />{" "}
-            <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
-            <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />
+            <Buttonsh3>Climatizador de Parede Comercial</Buttonsh3>
+            <span>
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />
+            </span>
             <p>
               O Climatizador de Ar Comercial <strong>PERFERRO</strong> traz como
               principal benefício a renavação e umidificação do ar ambiente,
               Reduzindo e, até 40% o desperdicios nos hortifrutis e outros
               produtos naturais,
             </p>
-            <h4>Onde se Aplica?</h4>
+            <Buttonsh3>Onde se Aplica?</Buttonsh3>
             <p>
               A aplicação do Climatizador de Ar Comercial é recomendado para
               Hortifrutis, Supermercados, Padarias entre outros locais onde a
@@ -304,22 +289,19 @@ export default function VerticalTabs() {
             </p>
           </TabPanel>
           <TabPanel value={value} index={5}>
-            <h3>Climatizador de Parede Industrial</h3>
-            <Image
-              width={100}
-              height={100}
-              src={Trabalhos}
-              alt="Trabalhos"
-            />{" "}
-            <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
-            <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />
+            <Buttonsh3>Climatizador de Parede Industrial</Buttonsh3>
+            <span>
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />
+            </span>
             <p>
               O Climatizador de Ar Comercial <strong>PERFERRO</strong> traz como
               principal benefício a renavação e umidificação do ar ambiente,
               Reduzindo e, até 40% o desperdicios nos hortifrutis e outros
               produtos naturais,
             </p>
-            <h4>Onde se Aplica?</h4>
+            <Buttonsh3>Onde se Aplica?</Buttonsh3>
             <p>
               A aplicação do Climatizador de Ar Comercial é recomendado para
               Hortifrutis, Supermercados, Padarias entre outros locais onde a
@@ -328,22 +310,19 @@ export default function VerticalTabs() {
             </p>
           </TabPanel>
           <TabPanel value={value} index={6}>
-            <h3>Climatizador Econômico</h3>
-            <Image
-              width={100}
-              height={100}
-              src={Trabalhos}
-              alt="Trabalhos"
-            />{" "}
-            <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
-            <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />
+            <Buttonsh3>Climatizador Econômico</Buttonsh3>
+            <span>
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />{" "}
+              <Image width={100} height={100} src={Trabalhos} alt="Trabalhos" />
+            </span>
             <p>
               O Climatizador de Ar Comercial <strong>PERFERRO</strong> traz como
               principal benefício a renavação e umidificação do ar ambiente,
               Reduzindo e, até 40% o desperdicios nos hortifrutis e outros
               produtos naturais,
             </p>
-            <h4>Onde se Aplica?</h4>
+            <Buttonsh3>Onde se Aplica?</Buttonsh3>
             <p>
               A aplicação do Climatizador de Ar Comercial é recomendado para
               Hortifrutis, Supermercados, Padarias entre outros locais onde a
